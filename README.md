@@ -5,7 +5,7 @@ Generate paint by number images (vectorized with SVG) from any input image.
 
 ## Demo
 
-Try it out [here](https://drake7707.github.io/paintbynumbersgenerator/index.html)
+Try it out [here](https://drakarah.github.io/paintbynumbersgenerator/index.html)
 
 ### CLI Version
 
@@ -22,6 +22,7 @@ The settings contain mostly the same settings in the web version:
  - kMeansClusteringColorSpace: the color space to apply clustering in
  - kMeansColorRestrictions: Specify which colors should be used. An array of rgb values (as number array) or names of colors (reference to color aliases). If no colors are specified no restrictions are applied. Useful if you only have a few colors of paint on hand.
  - colorAliases: map of key/values where the keys are the color names and the values are the rgb colors (as number array). You can use the color names in the color restrictions above. The names are also mentioned in the output json that tells you how much % of the area is of that specific color.
+   
        ```
        "colorAliases": {
               "A1": [            0,            0,            0        ],
@@ -29,6 +30,7 @@ The settings contain mostly the same settings in the web version:
               "A3": [            0,            255,            0        ],
           }
         ```
+   
  - removeFacetsSmallerThanNrOfPoints: removes any facets that are smaller than the given amount of pixels. Lowering the value will create more detailed results but might be much harder to actually paint due to their size.
  - removeFacetsFromLargeToSmall (true/false): largest to smallest will prevent boundaries from warping the shapes because the smaller facets act as border anchorpoints but can be considerably slower
  - maximumNumberOfFacets: if there are more facets than the given maximum number, keep removing the smallest facets until the limit is reached
